@@ -32,7 +32,8 @@ http {
 
 usage:  view-source:http://192.168.18.22/?system.run[w]
 You can use the browser to send command, because there is no formatted output interface will be a mess, so the use of source code will display properly, but you can also use some tools such as Postman, Fiddler.
-"[]"can be any command in it, of course, it also depends on the running nginx user permissions, the last tip, involves the interactive command will go wrong or do not support, such as the "top", this is not a bug, so you don't have to give me a feedback
+"[]"can be any command in it, of course, it also depends on the running nginx user permissions, the last tip, involves the interactive command will go wrong or do not support, such as the "top", this is not a bug, so you don't have to give me a feedback。
+Command timeout is 3 seconds
 
 Installation
     cd nginx-**version**
