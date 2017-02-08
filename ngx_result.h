@@ -35,14 +35,12 @@ do				\
 }				\
 while (0)
 
-
 #define ngxexecute_realloc(src, size)		ngxexecute_realloc2(__FILE__, __LINE__, src, size)
 void    *ngxexecute_realloc2(const char *filename, int line, void *old, size_t size);
 #define ngxexecute_malloc(old, size)		ngxexecute_malloc2(__FILE__, __LINE__, old, size)
 void    *ngxexecute_malloc2(const char *filename, int line, void *old, size_t size);
 #define ngxexecute_strdup(old, str)		ngxexecute_strdup2(__FILE__, __LINE__, old, str)
 char    *ngxexecute_strdup2(const char *filename, int line, char *old, const char *str);
-
 int	ngxexecute_execute(const char *command, char **buffer, char *error, size_t max_error_len);
 int	ngxexecute_popen(pid_t *pid, const char *command);
 void    *ngxexecute_realloc2(const char *filename, int line, void *old, size_t size);
