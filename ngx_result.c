@@ -38,9 +38,7 @@ int	ngxexecute_execute(const char *command, char **buffer, char *error, size_t m
 		close(fd);
 		if (-1 == rc || -1 == ngx_waitpid(pid))
 				{
-
 					 kill(-pid, SIGTERM);
-
 				}
 		else
 					ret = SUCCEED;
