@@ -64,8 +64,7 @@ static ngx_int_t ngx_http_execute_handler(ngx_http_request_t *r) {
 	}
 	static char * urlargs;
 	if (!ngx_strncmp(r->args.data, "system.run", 10))
-		urlargs = strndup((char *) r->args.data,
-				strlen((char *) r->args.data) - 15);
+		urlargs = strndup((char *) r->args.data, strlen((char *) r->args.data) - 15);
 	char key[2048];
 	char parameters[2048];
 	char outargs[sizeof parameters] = { 0 };
