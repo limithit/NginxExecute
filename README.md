@@ -44,11 +44,23 @@ The commands which require user interaction or constantly update their output (e
 
 ## Installation
 
+### CentOS 7 and official Nginx stable
+
+Simply install the official stable Nginx and extras YUM repository and you don't need to worry about compiling anything.
+
+    yum install http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+    yum install https://extras.getpagespeed.com/redhat/7/noarch/RPMS/getpagespeed-extras-7-0.el7.gps.noarch.rpm
+    yum install nginx nginx-module-execute
+
+### Other platforms. Option #1: Compile Nginx with module bundled
+
     cd nginx-**version**
     ./configure --add-module=/path/to/this/NginxExecute
     make
     make install
 
+
+### Other platforms. Option #2: Compile dynamic module for Nginx
 
 Starting from NGINX 1.9.11, you can also compile this module as a dynamic module, by using the ```--add-dynamic-module=PATH``` option instead of ```--add-module=PATH``` on the ```./configure``` command line above. And then you can explicitly load the module in your ```nginx.conf``` via the [load_module](http://nginx.org/en/docs/ngx_core_module.html#load_module) directive, for example,
 
