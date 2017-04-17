@@ -52,6 +52,10 @@ Simply install the official stable Nginx and extras YUM repository and you don't
     yum install https://extras.getpagespeed.com/redhat/7/noarch/RPMS/getpagespeed-extras-7-0.el7.gps.noarch.rpm
     yum install nginx nginx-module-execute
 
+Add to your *nginx.conf* :
+
+    load_module modules/ngx_http_execute_module.so;
+
 ### Other platforms. Option #1: Compile Nginx with module bundled
 
     cd nginx-**version**
