@@ -50,10 +50,11 @@ The commands which require user interaction or constantly update their output (e
     make install
 
 
-Starting from NGINX 1.9.11, you can also compile this module as a dynamic module, by using the ```--add-dynamic-module=PATH``` option instead of ```--add-module=PATH``` on the ```./configure``` command line above. And then you can explicitly load the module in your ```nginx.conf``` via the ```load_module``` directive, for example,
+Starting from NGINX 1.9.11, you can also compile this module as a dynamic module, by using the ```--add-dynamic-module=PATH``` option instead of ```--add-module=PATH``` on the ```./configure``` command line above. And then you can explicitly load the module in your ```nginx.conf``` via the [load_module](http://nginx.org/en/docs/ngx_core_module.html#load_module) directive, for example,
 
+```nginx
     load_module /path/to/modules/ngx_http_execute_module.so;
-
+```
 This module is compatible with following nginx releases:
 
 
