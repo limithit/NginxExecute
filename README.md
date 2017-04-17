@@ -1,10 +1,10 @@
 ﻿# NginxExecute
 
-# Introduction
+## Introduction
 
 The *ngx_http_execute_module* is used to execute commands remotely and return results.
 
-Usage example：
+Configuration example：
 
 
     worker_processes  1;
@@ -32,7 +32,7 @@ Usage example：
     }
 
 Usage:  ```view-source:http://192.168.18.22/?system.run[command]```
-The ```command``` can be any system command in it. The command you will want to use there depends on the permissions that nginx runs with.
+The ```command``` can be any system command. The command you will want to use depends on the permissions that nginx runs with.
 
     view-source:http://192.168.18.22/?system.run[ifconfig]
 
