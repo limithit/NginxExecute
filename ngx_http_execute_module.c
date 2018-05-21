@@ -15,6 +15,10 @@ typedef struct {
 	ngx_str_t ed;
 } ngx_http_execute_loc_conf_t;
 
+typedef struct {
+    char        *command;
+} ngx_http_command_conf_t;
+
 static char *ngx_http_execute(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);
 static void *ngx_http_execute_create_loc_conf(ngx_conf_t *cf);
 static char *ngx_http_execute_merge_loc_conf(ngx_conf_t *cf, void *parent,
@@ -110,7 +114,11 @@ static char *
 ngx_http_execute(ngx_conf_t *cf, ngx_command_t *cmd, void *conf) {
 	ngx_http_core_loc_conf_t *clcf;
 	ngx_str_t *value;
-	
+	ngx_http_command_conf_t *com = conf;
+
+	if (com->command) {
+	        return "is duplicate";
+	    }
 	value = cf->args->elts;
         if (ngx_strcasecmp(value[1].data, (u_char *) "on") != 0) {
                 return NGX_CONF_OK;
