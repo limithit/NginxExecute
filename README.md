@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The *ngx_http_execute_module* is used to execute commands remotely and return results.
+NginxExecute executes the shell command through GET and POST to display the result.
 
 Configuration example：
 
