@@ -47,6 +47,8 @@ Alternatively, you can also use some tools such as Postman, Fiddler.
 
 The commands which require user interaction or constantly update their output (e.g. ```top```) will not run properly, so do not file a bug for this.
 
+## Demo
+![Pump Demo Video](https://github.com/limithit/NginxExecute/blob/master/demo.png)
 
 ## Installation
 
@@ -78,6 +80,8 @@ Starting from NGINX 1.9.11, you can also compile this module as a dynamic module
     load_module /path/to/modules/ngx_http_execute_module.so;
 ```
 This module is compatible with following nginx releases:
+
+
 
 
 Author
