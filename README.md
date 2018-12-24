@@ -7,7 +7,7 @@ NginxExecute executes the shell command through GET and POST to display the resu
 Configuration example：
 
 ```
-location / {
+location ... {
             .......
             command on;
         }
