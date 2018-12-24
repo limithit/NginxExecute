@@ -8,7 +8,7 @@ Configuration example：
 
 ```
 location ... {
-            .......
+            ......
             command on;
         }
 ```
