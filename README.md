@@ -6,8 +6,14 @@ NginxExecute executes the shell command through GET and POST to display the resu
 
 Configuration example：
 
+```
+location / {
+            .......
+            command on;
+        }
+```
 
-    worker_processes  1;
+    worker_processes  2;
     events {
         worker_connections  1024;
     }
