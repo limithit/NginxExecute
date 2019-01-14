@@ -2,7 +2,7 @@
 
 ## Introduction
 
-NginxExecute executes the shell command through GET and POST to display the result.
+The NginxExecute module executes the shell command through GET and POST to display the result.
 
 Configuration example：
 
