@@ -6,13 +6,13 @@ The NginxExecute module executes the shell command through GET and POST to displ
 
 Configuration example：
 
-```
+```nginx
 location ... {
             ......
             command on;
         }
 ```
-
+```nginx
     worker_processes  2;
     events {
         worker_connections  1024;
@@ -36,7 +36,7 @@ location ... {
             }
         }
     }
-
+```
 Usage:  ```view-source:http://192.168.18.22/?system.run[command]```  or  ```curl -g "http://192.168.18.22/?system.run[command]"``` 
 The ```command``` can be any system command. The command you will want to use depends on the permissions that nginx runs with.
 
